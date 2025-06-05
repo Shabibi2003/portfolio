@@ -10,11 +10,13 @@ import base64
 from streamlit_extras.mention import mention
 from streamlit_extras.app_logo import add_logo
 import sqlite3
+import path
+import os
 #from bs4 import BeautifulSoup
 from streamlit_extras.echo_expander import echo_expander
 
-#test
-
+dir_path = path.Path(__file__).abspath()
+parent_dir = dir_path.parent
 # Set page title
 st.set_page_config(page_title="Yousuf Shabibi", page_icon = "desktop_computer", layout = "wide", initial_sidebar_state = "auto")
 
@@ -86,36 +88,36 @@ def pdf_link(pdf_url, link_text="Click here to view PDF"):
 # Load assets
 #lottie_coding = load_lottieurl("https://assets5.lottiefiles.com/packages/lf20_fcfjwiyb.json")
 # Assets for about me
-img_utown = Image.open("images/utown.JPG")
-img_lh = Image.open("images/lh.jpg")
-img_ifg = Image.open("images/ifg.jpg")
+img_utown = Image.open(os.path.join(parent_dir, "images", "utown.jpg"))
+img_lh = Image.open(os.path.join(parent_dir, "images","lh.jpg"))
+img_ifg = Image.open(parent_dir, "images","ifg.jpg")
 #Assets for competitions
-img_lit = Image.open("images/legalease.jpg")
-img_lifehack2 = Image.open("images/lifehack2.jpg")
-img_lifehack = Image.open("images/lifehack.jpg")
-img_he4d = Image.open("images/he4d.jpg")
-img_ecc = Image.open("images/ecc.jpg")
-img_shopee = Image.open("images/shopee.png")
-img_sbcc = Image.open("images/sbcc.png")
-img_runes = Image.open("images/runes.png")
+img_lit = Image.open(parent_dir, "images","legalease.jpg")
+img_lifehack2 = Image.open(parent_dir, "images","lifehack2.jpg")
+img_lifehack = Image.open(parent_dir, "images","lifehack.jpg")
+img_he4d = Image.open(parent_dir, "images","he4d.jpg")
+img_ecc = Image.open(parent_dir, "images","ecc.jpg")
+img_shopee = Image.open(parent_dir, "images","shopee.png")
+img_sbcc = Image.open(parent_dir, "images","sbcc.png")
+img_runes = Image.open(parent_dir, "images","runes.png")
 # Assets for education
-img_sji = Image.open("images/sji.jpg")
-img_tpjc = Image.open("images/tpjc.jpg")
-img_nus = Image.open("images/nus.jpeg")
-img_poc = Image.open("images/poc.jpg")
-img_gmss = Image.open("images/gmss.jpg")
-img_sjij = Image.open("images/sjij.jpg")
-img_dsa = Image.open("images/dsa.jpg")
+img_sji = Image.open(parent_dir, "images","sji.jpg")
+img_tpjc = Image.open(parent_dir, "images","tpjc.jpg")
+img_nus = Image.open(parent_dir, "images","nus.jpeg")
+img_poc = Image.open(parent_dir, "images","poc.jpg")
+img_gmss = Image.open(parent_dir, "images","gmss.jpg")
+img_sjij = Image.open(parent_dir, "images","sjij.jpg")
+img_dsa = Image.open(parent_dir, "images","dsa.jpg")
 # Assets for experiences
-img_quest = Image.open("images/EDSlogo.jpg")
-img_scor = Image.open("images/scor.jpg")
-img_iasg = Image.open("images/iasg.jpg")
-img_sshsph = Image.open("images/sshsph.jpg")
-img_yll = Image.open("images/yll.jpg")
-img_saf = Image.open("images/saf.jpg")
-img_bitmetrix = Image.open("images/bitmetrix.jpg")
-img_groundup = Image.open("images/groundup.jpg")
-img_hedgedrip = Image.open("images/hedgedrip.jpg")
+img_quest = Image.open(parent_dir, "images","EDSlogo.jpg")
+img_scor = Image.open(parent_dir, "images","scor.jpg")
+img_iasg = Image.open(parent_dir, "images","iasg.jpg")
+img_sshsph = Image.open(parent_dir, "images","sshsph.jpg")
+img_yll = Image.open(parent_dir, "images","yll.jpg")
+img_saf = Image.open(parent_dir, "images","saf.jpg")
+img_bitmetrix = Image.open(parent_dir, "images","bitmetrix.jpg")
+img_groundup = Image.open(parent_dir, "images","groundup.jpg")
+img_hedgedrip = Image.open(parent_dir, "images","hedgedrip.jpg")
 # Assets for projects
 image_names_projects = ["ecom", "chatgpt", "videogames", "health", 
                          "biopics", "anime", "word2vec", "cellphone", 
@@ -128,20 +130,20 @@ images_projects = [Image.open(f"images/{name}.{'jpg' if name not in ('map', 'gep
 #                          "sjilogo", "nuspc", "hcs", "fintech"]
 # images_vol = [Image.open(f"images/{name}.{'jpg' if name not in ('map', 'gephi', 'health') else 'png'}") for name in image_names_vol]
 # Assets for blog
-img_qb = Image.open("images/qb.jpg")
-img_mayans = Image.open("images/mayans.jpg")
-img_outlier = Image.open("images/outlier.png")
-img_dac = Image.open("images/dac.png")
-img_raffles = Image.open("images/raffles.jpg")
-img_covid = Image.open("images/covid.jpg")
-img_gender = Image.open("images/gender.jpg")
-img_hci = Image.open("images/hci.jpg")
-img_wordcloud = Image.open("images/wordcloud.jpg")
-img_taste = Image.open("images/taste.jpg")
-img_measles = Image.open("images/measles.jpeg")
-img_bmsaew = Image.open("images/bmsaew.png")
-img_dac1 = Image.open("images/dac1.png")
-img_dac2 = Image.open("images/dac2.png")
+img_qb = Image.open(parent_dir, "images","qb.jpg")
+img_mayans = Image.open(parent_dir, "images","mayans.jpg")
+img_outlier = Image.open(parent_dir, "images","outlier.png")
+img_dac = Image.open(parent_dir, "images","dac.png")
+img_raffles = Image.open(parent_dir, "images","raffles.jpg")
+img_covid = Image.open(parent_dir, "images","covid.jpg")
+img_gender = Image.open(parent_dir, "images","gender.jpg")
+img_hci = Image.open(parent_dir, "images","hci.jpg")
+img_wordcloud = Image.open(parent_dir, "images","wordcloud.jpg")
+img_taste = Image.open(parent_dir, "images","taste.jpg")
+img_measles = Image.open(parent_dir, "images","measles.jpeg")
+img_bmsaew = Image.open(parent_dir, "images","bmsaew.png")
+img_dac1 = Image.open(parent_dir, "images","dac1.png")
+img_dac2 = Image.open(parent_dir, "images","dac2.png")
 # Assets for gallery
 # 2005
 # img_2005_1 = Image.open("gallery/2005_1.jpg")

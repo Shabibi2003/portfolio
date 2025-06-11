@@ -1142,7 +1142,7 @@ elif choose == "Resume":
         btn = st.download_button(
             label="Download Resume (1 page)",
             data=file,
-            file_name="HarryChang_Resume.pdf",
+            file_name="Yousuf_Resume.pdf",
             mime="application/pdf"
         )
 elif choose == "Contact":

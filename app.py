@@ -386,7 +386,7 @@ if choose == "About Me":
             st.write("👋🏻 I’m Yousuf, an Artificial Intelligence and Data Science undergraduate based in Delhi. I have a strong foundation in AI and Data Science, with specialization in Python, data visualization, and analytics. I possess hands-on experience in machine learning projects and predictive modeling, along with developing web applications using Flask and Streamlit. Currently, I am working as a Data Analyst Intern at EDS Company (Delhi), where I am further enhancing my analytical skills..")
             # st.write("💼 With the COVID-19 pandemic behind us, I believe there is potential for data science to be applied in the retail industry. In response to the increasing demand for data analytics from both online and brick-and-mortar sales, I am thus aiming to enter this industry for my first full-time job.")
             st.write("🏋🏻 In addition, I like to run, write, play video games and... enjoy eating good food in my free time!")
-            st.write("👨🏼‍💻 Academic interests: Data Visualization, Market Basket Analysis, Recommendation Systems, Natural Language Processing, Deep Learning")
+            st.write("👨🏼‍💻 Academic interests: Data Visualization, Market Basket Analysis, Recommendation Systems, Natural Language Processing, Deep Learning, Machine Learning")
             st.write("💭 Ideal Career Prospects: Data Analyst, Data Scientist, Data Engineer, Business Intelligence Analyst, ML Engineer")
             st.write("📄 [Resume (1 page)](https://drive.google.com/file/d/1N6n1v52rHJ5Rk1tJDfwB488UR3afPTi7/view?pli=1)")
         with middle_column:
